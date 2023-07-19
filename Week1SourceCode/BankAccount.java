@@ -10,17 +10,13 @@ public class BankAccount {
     public BankAccount() {
         balance = 0;
     }
-
-    public void deposit(double amountDeosited) {
-        balance += amountDeosited;
+    public void deposit(double amountDeposited) {
+        balance += amountDeposited;
     }
     public void withdraw(double amountWithdrawn) {
-        if (amountWithdrawn <= balance) {
-            balance -= amountWithdrawn;
-        } else {
-            System.out.println("Insufficient funds.");
+        balance -= amountWithdrawn;
         }
-    }
+
 
     public String getFirstName() {
         return firstName;
@@ -46,7 +42,8 @@ public class BankAccount {
     }
 
     public void accountSummary() {
-        System.out.println("Here is your account summary  for " + getFirstName() + ", " + getLastName());
+        System.out.println("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*");
+        System.out.println("Here is your account summary  for " + getFirstName() + " " + getLastName());
         System.out.println("   ID : " + getAccountID());
         System.out.println("   Balance : " + getBalance());
     }

@@ -2,15 +2,22 @@ package CritcalWk1;
 
 public class Main {
     public static void main(String[] args) {
-
-        BankAccount myAccount = new BankAccount();
+        CheckingAccount myAccount = new CheckingAccount();
 
         myAccount.deposit(100);
 
-        System.out.println(myAccount.getBalance());
+        myAccount.setAccountID(1991);
+        myAccount.setFirstName("Toby");
+        myAccount.setLastName("Ortiz");
 
-        // test, test. this here is a test.
+        myAccount.displayAccount();
 
+        myAccount.withdraw(99);
+        myAccount.processWithdraw();
+        myAccount.displayAccount();
 
+        myAccount.withdraw(100);
+        myAccount.processWithdraw();
+        myAccount.displayAccount();
     }
 }
