@@ -23,15 +23,18 @@ public class GUIBankingApp extends JFrame {
         setSize(300, 180);
         setLocationRelativeTo(null); // Center the window on the screen
 
-        initComponents();   // method sets up the buttons, labels, and other GUI elements on the window - method defined down below
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new GridLayout(4, 2, 10, 10));
 
+        initComponents(mainPanel); // method sets up the buttons, labels, and other GUI elements on the window - method defined down below
+
+        add(mainPanel); // Add the mainPanel to the JFrame
         setVisible(true);
     }
 
 
     // private helper method
-    private void initComponents() {
-
+    private void initComponents(JPanel panel) {
         // Create components
         balanceLabel = new JLabel("Balance: $" + balance);
         amountField = new JTextField(10);
@@ -39,16 +42,15 @@ public class GUIBankingApp extends JFrame {
         withdrawButton = new JButton("Withdraw");
         setInitialBalanceButton = new JButton("Set Initial Balance");
 
-        // Set up layout
-        setLayout(new GridLayout(4, 2, 10, 10));
-        add(new JLabel("Amount:"));
-        add(amountField);
-        add(depositButton);
-        add(new JLabel());
-        add(withdrawButton);
-        add(balanceLabel);
-        add(setInitialBalanceButton);
-        add(new JLabel());
+        // Add components to the panel
+        panel.add(new JLabel("Amount:"));
+        panel.add(amountField);
+        panel.add(depositButton);
+        panel.add(new JLabel());
+        panel.add(withdrawButton);
+        panel.add(balanceLabel);
+        panel.add(setInitialBalanceButton);
+        panel.add(new JLabel());
 
         // Add event listeners to each button using anonymous inner class.
         depositButton.addActionListener(new ActionListener() {
