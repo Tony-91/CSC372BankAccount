@@ -1,4 +1,4 @@
-package CritcalWk1;
+package SourceCode.Week1CMDLineApp;
 
 public class CheckingAccount extends BankAccount {
 
