@@ -1,4 +1,4 @@
-package SourceCode.javafx;
+package SourceCode.Week3javafx;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

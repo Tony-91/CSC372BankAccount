@@ -1,4 +1,4 @@
-package SourceCode.javafx;
+package SourceCode.Week3javafx;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
