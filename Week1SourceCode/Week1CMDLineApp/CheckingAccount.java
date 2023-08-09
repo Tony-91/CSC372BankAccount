@@ -1,10 +1,13 @@
 package SourceCode.Week1CMDLineApp;
 
 public class CheckingAccount extends BankAccount {
-
+    // Class attribute to store the interest rate for the account
     private double interestRate = 0;
+
+    // Constant to define the overdraft fee amount
     private final double OVERDRAFT_FEE = 30;
 
+    // Method to process a withdrawal from the account
     public void processWithdraw() {
         System.out.println("Processing withdrawal...");
         if (getBalance() < 0) {
@@ -16,11 +19,12 @@ public class CheckingAccount extends BankAccount {
         }
         System.out.println();
     }
-
+    // Method to display the account details
     public void displayAccount() {
-        super.accountSummary();
-        System.out.println("   Interest rate : " + interestRate);
+        super.accountSummary(); // Call the accountSummary method from the parent class
+        System.out.println("   Interest rate : " + interestRate); // Display the interest rate
         System.out.println();
     }
+
 
 }
